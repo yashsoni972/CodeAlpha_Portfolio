@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Yash Soni - Frontend Developer Portfolio</title>
+    <meta name="description" content="Yash Mayurkumar Soni — Frontend Developer Portfolio. Skilled in React, JavaScript, HTML, CSS, Tailwind CSS.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='900' fill='%236366f1'>Y</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <div class="splash-bg-orb"></div>
+        <div class="splash-content">
+            <!-- Avatar ring -->
+            <div class="splash-avatar-ring">
+                <div class="splash-avatar-border"></div>
+                <div class="splash-avatar">
+                    <img src="profile.jpg" alt="Yash Soni" class="splash-avatar-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    <span class="splash-avatar-fallback" style="display:none">YS</span>
+                </div>
+            </div>
+
+            <!-- Domain -->
+            <div id="domain-text" class="splash-domain hidden-splash">
+                <span class="splash-domain-name">yashsoni</span><span class="splash-domain-ext">.dev</span><span class="splash-cursor">|</span>
+            </div>
+
+            <!-- Tagline -->
+            <div id="tagline-text" class="splash-tagline hidden-splash">
+                <p class="splash-subtitle">Frontend Developer · React · UI/UX</p>
+                <div class="splash-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Available for Opportunities</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="main-content">
+        <!-- Navbar -->
+        <nav id="navbar" class="navbar">
+            <div class="navbar-container">
+                <button class="navbar-logo" onclick="scrollToSection('hero')">
+                    <span class="logo-gradient">YS</span><span class="logo-dot">.</span><span class="logo-ext">dev</span>
+                </button>
+
+                <!-- Desktop Menu -->
+                <ul class="navbar-menu desktop-only">
+                    <li><button class="nav-link" onclick="scrollToSection('about')">About</button></li>
+                    <li><button class="nav-link" onclick="scrollToSection('skills')">Skills</button></li>
+                    <li><button class="nav-link" onclick="scrollToSection('projects')">Projects</button></li>
+                    <li><button class="nav-link" onclick="scrollToSection('experience')">Experience</button></li>
+                    <li><button class="nav-link" onclick="scrollToSection('education')">Education</button></li>
+                    <li><button class="nav-link" onclick="scrollToSection('resume')">Resume</button></li>
+                    <li><button class="nav-link" onclick="scrollToSection('contact')">Contact</button></li>
+                </ul>
+
+                <!-- Hire Me Button -->
+                <button class="btn-primary desktop-only" onclick="scrollToSection('contact')">Hire Me ✨</button>
+
+                <!-- Mobile Hamburger -->
+                <button id="hamburger" class="hamburger mobile-only">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu">
+                <button class="mobile-nav-link" onclick="scrollToSection('about')">About</button>
+                <button class="mobile-nav-link" onclick="scrollToSection('skills')">Skills</button>
+                <button class="mobile-nav-link" onclick="scrollToSection('projects')">Projects</button>
+                <button class="mobile-nav-link" onclick="scrollToSection('experience')">Experience</button>
+                <button class="mobile-nav-link" onclick="scrollToSection('education')">Education</button>
+                <button class="mobile-nav-link" onclick="scrollToSection('resume')">Resume</button>
+                <button class="mobile-nav-link" onclick="scrollToSection('contact')">Contact</button>
+                <button class="btn-primary" onclick="scrollToSection('contact')" style="width: 100%; margin-top: 1rem;">
+                    Hire Me ✨
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-bg-orbs">
+                <div class="orb orb-1"></div>
+                <div class="orb orb-2"></div>
+                <div class="orb orb-3"></div>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge fade-in-up" style="animation-delay: 0.1s">
+                        <span class="badge-dot"></span>
+                        <span>Available for Opportunities</span>
+                    </div>
+
+                    <h1 class="hero-title fade-in-up" style="animation-delay: 0.2s">
+                        Hi, I'm <span class="gradient-text">Yash Soni</span>
+                    </h1>
+
+                    <div class="hero-role fade-in-up" style="animation-delay: 0.3s">
+                        <span class="role-label">I'm a </span>
+                        <span id="typing-text" class="role-text">Frontend Developer</span>
+                        <span class="typing-cursor"></span>
+                    </div>
+
+                    <p class="hero-summary fade-in-up" style="animation-delay: 0.4s">
+                        Frontend Developer passionate about crafting clean, responsive, and interactive web experiences. Skilled in building user-friendly interfaces that combine functionality with modern design.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta fade-in-up" style="animation-delay: 0.5s">
+                        <button class="btn-primary" onclick="scrollToSection('projects')">
+                            View My Work <i class="fas fa-arrow-down"></i>
+                        </button>
+                        <button class="btn-outline" onclick="scrollToSection('contact')">
+                            Let's Talk <i class="fas fa-envelope"></i>
+                        </button>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="hero-socials fade-in-up" style="animation-delay: 0.6s">
+                        <a href="https://github.com/yashsoni972" target="_blank" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yash-soni-b46682355/" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:75soniyashmayurkumar@gmail.com" class="social-link" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right side: Profile Avatar -->
+                <div class="hero-avatar-wrap">
+                    <div class="hero-avatar-glow"></div>
+                    <div class="hero-avatar-border">
+                        <div class="hero-avatar-inner">
+                            <img src="profile.jpg" alt="Yash Soni" class="hero-avatar-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                            <div class="hero-avatar-fallback" style="display:none">YS</div>
+                        </div>
+                    </div>
+                    <div class="hero-winner-badge">🏆 Hackathon Winner</div>
+                    <div class="hero-stats">
+                        <div class="hero-stat"><div class="hero-stat-num">3+</div><div class="hero-stat-label">Projects</div></div>
+                        <div class="hero-stat"><div class="hero-stat-num">1st</div><div class="hero-stat-label">Hackathon</div></div>
+                        <div class="hero-stat"><div class="hero-stat-num">2+</div><div class="hero-stat-label">Yrs Coding</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">About Me</div>
+                    <h2 class="section-title">Who <span class="gradient-text">I Am</span></h2>
+                </div>
+                <div class="about-grid">
+                    <!-- Left: profile image -->
+                    <div class="about-left">
+                        <div class="about-img-wrap">
+                            <div class="about-img-glow"></div>
+                            <div class="about-img-border">
+                                <div class="about-img-inner">
+                                    <img src="profile.jpg" alt="Yash Soni" class="about-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                    <div class="about-img-fallback" style="display:none">YS</div>
+                                </div>
+                            </div>
+                            <div class="about-badge"><div class="about-badge-sub">Currently at</div><div class="about-badge-main">CVM University</div></div>
+                        </div>
+                        <div class="about-college-card glass-card">
+                            <div class="about-college-logo">
+                                <img src="college-logo.png" alt="CVM" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+                                <span style="display:none;font-size:1.5rem">🎓</span>
+                            </div>
+                            <div>
+                                <div class="about-college-name">CVM University</div>
+                                <div class="about-college-deg">B.Tech Computer Engineering</div>
+                                <div class="about-college-year">2023 — Present</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right: text -->
+                    <div class="about-right">
+                        <h3 class="about-heading">Frontend Developer & <span class="gradient-text">Problem Solver</span></h3>
+                        <p class="about-paragraph">I'm a passionate Frontend Developer currently pursuing B.Tech in Computer Engineering at CVM University, Gujarat. I love building clean, responsive, and interactive web experiences that combine functionality with modern design.</p>
+                        <p class="about-paragraph">With hands-on experience from my internship at CodeAlpha and winning 1st place in a hackathon with CitySolve, I'm dedicated to transforming ideas into high-performance web applications.</p>
+                        <div class="about-info-cards">
+                            <div class="about-info-card">
+                                <div class="about-info-icon"><i class="fas fa-book"></i></div>
+                                <div><div class="about-info-label">Education</div><div class="about-info-val">B.Tech Computer Engineering</div></div>
+                            </div>
+                            <div class="about-info-card">
+                                <div class="about-info-icon"><i class="fas fa-briefcase"></i></div>
+                                <div><div class="about-info-label">Internship</div><div class="about-info-val">Frontend Dev Intern @ CodeAlpha</div></div>
+                            </div>
+                            <div class="about-info-card">
+                                <div class="about-info-icon"><i class="fas fa-trophy"></i></div>
+                                <div><div class="about-info-label">Achievement</div><div class="about-info-val">1st Place — Hackathon Winner</div></div>
+                            </div>
+                        </div>
+                        <div class="about-cta">
+                            <button class="btn-primary" onclick="scrollToSection('contact')">Hire Me <i class="fas fa-arrow-right"></i></button>
+                            <button class="btn-outline" onclick="scrollToSection('resume')">View Resume</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Technical Skills</div>
+                    <h2 class="section-title">My <span class="gradient-text">Tech Stack</span></h2>
+                    <p class="section-subtitle">Technologies I work with to build modern web applications</p>
+                </div>
+
+                <div class="skills-grid" id="skills-container">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+                    <p class="section-subtitle">Projects I've built with passion and precision</p>
+                </div>
+
+                <div class="projects-grid" id="projects-container">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Experience</div>
+                    <h2 class="section-title">My <span class="gradient-text">Journey</span></h2>
+                </div>
+                <div class="exp-row" id="experience-container"></div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Education</div>
+                    <h2 class="section-title">Academic <span class="gradient-text">Background</span></h2>
+                </div>
+                <div class="edu-timeline" id="education-container"></div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="resume">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Resume</div>
+                    <h2 class="section-title">My <span class="gradient-text">Resume</span></h2>
+                    <p class="section-subtitle">View and download my resume in PDF format</p>
+                </div>
+                <div class="resume-btns">
+                    <a href="YASH_SONI_RESUME.pdf" download="Yash_Soni_Resume.pdf" class="btn-primary">
+                        <i class="fas fa-download"></i> Download Resume PDF
+                    </a>
+                    <a href="YASH_SONI_RESUME.pdf" target="_blank" class="btn-outline">
+                        <i class="fas fa-external-link-alt"></i> Open in New Tab
+                    </a>
+                </div>
+                <div class="resume-info-cards">
+                    <div class="resume-info-card glass-card" style="border-color:#c7d2fe">
+                        <div class="resume-info-icon" style="color:#6366f1"><i class="fas fa-code"></i></div>
+                        <div class="resume-info-label">Role</div>
+                        <div class="resume-info-val">Frontend Developer</div>
+                    </div>
+                    <div class="resume-info-card glass-card" style="border-color:#bbf7d0">
+                        <div class="resume-info-icon" style="color:#16a34a"><i class="fas fa-check-circle"></i></div>
+                        <div class="resume-info-label">Status</div>
+                        <div class="resume-info-val">Open to Opportunities</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">Get In Touch</div>
+                    <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                    <p class="section-subtitle">Open to frontend developer roles, internships, and exciting projects</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <a href="tel:+919313083522" class="contact-item glass-card" style="--color:#16a34a; border-color:#bbf7d0; background:#f0fdf4">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div><h3>Phone</h3><p>+91 9313083522</p></div>
+                        </a>
+                        <a href="mailto:75soniyashmayurkumar@gmail.com" class="contact-item glass-card" style="--color:#dc2626; border-color:#fecaca; background:#fef2f2">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div><h3>Email</h3><p>75soniyashmayurkumar@gmail.com</p></div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yash-soni-b46682355/" target="_blank" class="contact-item glass-card" style="--color:#2563eb; border-color:#bfdbfe; background:#eff6ff">
+                            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                            <div><h3>LinkedIn</h3><p>Yash Soni</p></div>
+                        </a>
+                        <a href="https://github.com/yashsoni972" target="_blank" class="contact-item glass-card" style="--color:#1e293b; border-color:#e2e8f0; background:#f8fafc">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <div><h3>GitHub</h3><p>yashsoni972</p></div>
+                        </a>
+                    </div>
+
+                    <div class="contact-form glass-card">
+                        <h3>Send me a message</h3>
+                        <form id="contact-form" onsubmit="handleContactForm(event)">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <span class="logo-gradient">YS</span><span class="logo-dot">.</span><span style="color:#94a3b8">dev</span>
+                    </div>
+                    <p class="footer-desc">Frontend Developer passionate about building beautiful web experiences.</p>
+                    <div class="footer-socials">
+                        <a href="https://github.com/yashsoni972" target="_blank" class="footer-social"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/yash-soni-b46682355/" target="_blank" class="footer-social"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:75soniyashmayurkumar@gmail.com" class="footer-social"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-nav">
+                    <button onclick="scrollToSection('about')">About</button>
+                    <button onclick="scrollToSection('skills')">Skills</button>
+                    <button onclick="scrollToSection('projects')">Projects</button>
+                    <button onclick="scrollToSection('experience')">Experience</button>
+                    <button onclick="scrollToSection('education')">Education</button>
+                    <button onclick="scrollToSection('resume')">Resume</button>
+                    <button onclick="scrollToSection('contact')">Contact</button>
+                    <button class="btn-primary" onclick="scrollToSection('contact')">Hire Me ✨</button>
+                </div>
+                <div class="footer-bottom">
+                    <span>&copy; 2026 Yash Mayurkumar Soni. All rights reserved.</span>
+                    <span class="footer-status"><span class="status-dot"></span> Available for work</span>
+                    <span class="footer-role"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" style="width:16px;height:16px;vertical-align:middle;margin-right:4px"> Frontend Developer</span>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Chatbot -->
+        <div id="chatbot" class="chatbot">
+            <button id="chatbot-toggle" class="chatbot-toggle" onclick="toggleChatbot()">
+                <i class="fas fa-comments"></i>
+                <span class="new-message" id="new-message-indicator"></span>
+            </button>
+            <div id="chatbot-window" class="chatbot-window">
+                <div class="chatbot-header">
+                    <h3>Chat Assistant</h3>
+                    <button onclick="toggleChatbot()" class="close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div id="chat-messages" class="chat-messages">
+                    <div class="chat-message bot-message">
+                        <p>Hi! I'm Yash's assistant. Ask me anything about Yash, his projects, skills, or experience! 👋</p>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Type your message..." onkeypress="handleChatInput(event)">
+                    <button onclick="sendChatMessage()" class="send-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top -->
+        <button id="back-to-top" class="back-to-top" onclick="scrollToSection('hero')" title="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
