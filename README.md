@@ -60,8 +60,8 @@ I'm a **Frontend Developer** pursuing **B.Tech in Computer Engineering** at CVM 
 | Project | Description | Tech Stack | Live Demo |
 |---------|-------------|------------|-----------|
 | **CitySolve** 🏆 | Hackathon-winning civic issue reporting & management platform | React, Node.js, CSS | [🔗 Live](https://yashsoni.tech/#projects) |
-| **Gallery Hub** 🖼️ | Responsive image gallery with search, filter & lightbox preview | HTML5, CSS3, JavaScript | [🔗 Live](https://yashsoni972.github.io/CodeAlpha_Gallery_Hub/) · [📁 Repo](https://github.com/yashsoni972/CodeAlpha_Gallery_Hub) |
-| **Calculator Pro** 🧮 | Feature-rich calculator with history, keyboard support & clean UI | HTML5, CSS3, JavaScript | [🔗 Live](https://yashsoni972.github.io/CodeAlpha_Calculator-Pro/) · [📁 Repo](https://github.com/yashsoni972/CodeAlpha_Calculator-Pro) |
+| **Gallery Hub** 🖼️ | Responsive image gallery with search, filter & lightbox preview | HTML5, CSS3, JavaScript | [🔗 Live](https://yashsoni972.github.io/CodeAlpha_Gallery_Hub/)
+| **Calculator Pro** 🧮 | Feature-rich calculator with history, keyboard support & clean UI | HTML5, CSS3, JavaScript | [🔗 Live](https://yashsoni972.github.io/CodeAlpha_Calculator-Pro/) 
 | **Portfolio Website** 🌐 | Personal portfolio with AI-powered chat assistant | HTML, CSS, JS | [🔗 Live](https://yashsoni.tech) |
 
 ---
